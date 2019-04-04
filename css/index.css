@@ -155,25 +155,36 @@ h5 {
 }
 
 /* Your code starts here! */
-html {
+.container {
   width: 900px;
   margin: 0 auto;
 }
 
-.navbar {
-  display: flex;
-  vertical-align: middle;
-  margin-top: 15px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  /* border: 1px solid red */
+.content-container {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.navbar a {
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar a  {
   font-size: 14px;
   color: gray;
   text-decoration: none;
+  padding: 0px 10px;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .navbar a:hover {
@@ -322,6 +333,13 @@ footer {
   /* border: 1px solid red; */
 }
 
+.services-bottomcontent {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
 .bottomarticle {
   display: flex;
   flex-flow: column wrap;
@@ -329,16 +347,183 @@ footer {
   line-height: 1.25;
   letter-spacing: 0.1px;
   width: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   justify-content: space-evenly;
 }
 
-.bottomarticle h2, p {
+.bottomarticle h2,
+p {
   align-self: flex-start;
   margin-bottom: 15px;
 }
 
-.bottomcontent-list {
+.services-bottomcontent-list {
   list-style-position: inside;
   line-height: 1.5;
 }
+
+@media (max-width: 800px) {
+    .container {
+      width: 100%;
+    }
+
+    .content-container {
+      width: 90%
+    }
+
+    header {
+      display: flex;
+      flex-flow: column-reverse;
+    }
+
+    .logo {
+      padding-bottom: 15px;
+    }
+
+    .splash .headerimg {
+      display: none;
+    }
+
+    .title {
+      margin: 0 auto;
+    }
+
+    .topcontent {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.25;
+    }
+
+    .features, .about {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      padding: 0px 10px;
+      margin: 0 auto;
+    }
+    
+    .services, .product, .vision {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0px 10px;
+      margin: 0 auto;
+    }
+
+    .bottomcontent {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      line-height: 1.25;
+    }
+
+    .services-content {
+      display: flex;
+      justify-content: center;
+    }
+
+    .services-content .box {
+      width: 100%;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: space-around;
+    }
+
+    .services-bottomcontent {
+      display: flex;
+      justify-content: center;
+      margin-top: 35px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+      width: 100%;
+    }
+
+    .content-container {
+      width: 90%;
+    }
+
+    header {
+      display: flex;
+      flex-flow: column-reverse;
+      align-items: center;
+      margin-top: 0px;
+    }
+
+    header .navbar a {
+      text-align: center;
+      border: 1px solid gray;
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+      color: gray;
+      text-decoration: none;
+      padding-top: 15px;
+    }
+
+    .navbar {
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      display: block;
+      padding-top: 15px;
+    }
+
+    .splash .headerimg {
+      display: none;
+    }
+
+    .title {
+      margin: 0 auto;
+    }
+
+
+    .splash button {
+      margin-top: 25px;
+    }
+
+    .topcontent {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+      align-content: space-around;
+    }
+
+    .features, .about, .services, .product, .vision {
+      margin: 0px 0px 15px 0px;
+      height: auto;
+    }
+
+    .container h2 {
+      margin-bottom: 10px;
+    }
+    
+    .middle-img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .bottomcontent {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+      align-content: space-around;
+    }
+
+    .services-bottomcontent {
+      display: flex;
+      flex-flow: column wrap;
+      margin-top: 35px;
+      width: 100%;
+      align-items: center;
+    }
+
+    .services-info-img {
+      width: 100%;
+      padding-top: 15px;
+    }
+  }
