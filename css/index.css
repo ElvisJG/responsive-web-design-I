@@ -391,15 +391,15 @@ p {
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
-      height: 140px;
       padding: 0px 10px;
       margin: 0 auto;
     }
+    
     .services, .product, .vision {
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
-      height: 205px;
+      height: 100%;
       padding: 0px 10px;
       margin: 0 auto;
     }
@@ -446,7 +446,6 @@ p {
     header .logo {
       display: block;
       padding-top: 15px;
-      margin-bottom: 15px;
     }
 
     .splash .headerimg {
@@ -466,18 +465,27 @@ p {
       display: flex;
       flex-direction: column;
       line-height: 1.25;
-      height: 14em;
+      align-content: space-around;
     }
 
     .features, .about, .services, .product, .vision {
-      margin-bottom: 15px;
+      margin: 0px 0px 15px 0px;
+      height: auto;
+    }
 
+    .container h2 {
+      margin-bottom: 10px;
+    }
+    
+    .middle-img {
+      height: 100%;
+      width: 100%;
     }
 
     .bottomcontent {
       display: flex;
       flex-direction: column;
-      height: 25em;
-      margin-top: 15px;
+      line-height: 1.25;
+      align-content: space-around;
     }
   }
